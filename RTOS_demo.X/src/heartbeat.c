@@ -20,3 +20,19 @@ void taskHeartbeat_Execute(void)
     }
     portEXIT_CRITICAL();
 }
+
+void prvMainCoRoutine(CoRoutineHandle_t xHandle, unsigned portBASE_TYPE uxIndex)
+{
+    /* Co-routines MUST start with a call to crSTART. */
+    crSTART(xHandle);
+
+    for (;;)
+    {
+        crDELAY(xHandle, Time_MillisecondsToTicks(1000));
+
+        taskHeartbeat_Execute();
+    }
+
+    /* Co-routines MUST end with a call to crEND. */
+    crEND();
+}
