@@ -21,6 +21,12 @@ void taskHeartbeat_Execute(void)
     portEXIT_CRITICAL();
 }
 
+/*****************************************************************************
+
+    FreeRTOS Task implementation: Co-routine running heart beat
+
+ *****************************************************************************/
+
 void prvMainCoRoutine(CoRoutineHandle_t xHandle, unsigned portBASE_TYPE uxIndex)
 {
     /* Co-routines MUST start with a call to crSTART. */
