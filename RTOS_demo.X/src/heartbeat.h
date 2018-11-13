@@ -7,6 +7,7 @@ extern "C" {
 
     extern void taskHeartbeat_Init(unsigned portBASE_TYPE uxPriority);
     extern void taskHeartbeat_Execute(void);
+    extern void prvMainCoRoutine(CoRoutineHandle_t xHandle, unsigned portBASE_TYPE uxIndex);
 
 #ifdef	__cplusplus
 }
