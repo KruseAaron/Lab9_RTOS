@@ -26,14 +26,6 @@
 /* The number of flash co-routines to create. */
 #define mainNUM_FLASH_COROUTINES   (1)
 
-/*****************************************************************************
-
-    Private functions prototype
-
- *****************************************************************************/
-
-static void prvMainCoRoutine(CoRoutineHandle_t xHandle, unsigned portBASE_TYPE uxIndex);
-
 
 // *****************************************************************************
 // Section: Main Entry Point
